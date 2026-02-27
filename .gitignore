@@ -1,0 +1,39 @@
+# Rust build artifacts
+/target/
+**/target/
+
+# Cargo lock for library crates (keep for binary)
+# Cargo.lock is committed for reproducible builds
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Environment and secrets
+.env
+.env.*
+credentials.json
+*.pem
+*.key
+
+# OS files
+.DS_Store
+Desktop.ini
+
+# Coverage and profiling
+*.profraw
+*.profdata
+lcov.info
+tarpaulin-report.html
+coverage/
+
+# Generated documentation (use cargo doc --open to generate locally)
+/doc/
+
+# Benchmark outputs
+criterion/

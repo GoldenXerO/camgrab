@@ -1,0 +1,154 @@
+[workspace]
+resolver = "2"
+members = [
+    "crates/camgrab-cli",
+    "crates/camgrab-core",
+    "crates/camgrab-daemon",
+]
+
+[workspace.package]
+version = "1.0.0"
+edition = "2021"
+rust-version = "1.75"
+license = "MIT"
+authors = ["Justin Huang"]
+repository = "https://github.com/justinhuangcode/camgrab"
+homepage = "https://github.com/justinhuangcode/camgrab"
+readme = "README.md"
+keywords = ["camera", "rtsp", "onvif", "surveillance", "motion-detection"]
+categories = ["multimedia::video", "command-line-utilities"]
+description = "A modern CLI tool to capture snapshots, record clips, detect motion, and manage RTSP/ONVIF cameras"
+
+[workspace.dependencies]
+# Async runtime
+tokio = { version = "1", features = ["full"] }
+
+# Serialization
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+serde_yaml = "0.9"
+toml = "0.8"
+
+# CLI
+clap = { version = "4", features = ["derive", "env", "wrap_help"] }
+
+# Error handling
+thiserror = "2"
+anyhow = "1"
+miette = { version = "7", features = ["fancy"] }
+
+# Logging / tracing
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter", "json"] }
+
+# RTSP (pure Rust)
+retina = "0.4"
+url = "2"
+
+# Image processing
+image = "0.25"
+
+# Cryptography / TLS
+tokio-rustls = "0.26"
+rustls = "0.23"
+
+# HTTP client (for ONVIF, webhooks, S3)
+reqwest = { version = "0.12", default-features = false, features = ["rustls-tls", "json"] }
+
+# XML (for ONVIF SOAP)
+quick-xml = { version = "0.37", features = ["serialize"] }
+
+# Time
+chrono = { version = "0.4", features = ["serde"] }
+
+# UUID
+uuid = { version = "1", features = ["v4", "serde"] }
+
+# File system
+dirs = "6"
+notify = "7"
+
+# Terminal
+colored = "3"
+is-terminal = "0.4"
+
+# Base64
+base64 = "0.22"
+
+# Rand
+rand = "0.8"
+
+# MQTT
+rumqttc = "0.24"
+
+# Email
+lettre = { version = "0.11", default-features = false, features = ["builder", "tokio1-rustls-tls", "smtp-transport"] }
+
+# S3
+rust-s3 = { version = "0.35", default-features = false, features = ["tokio-rustls-tls"] }
+
+# Scheduling
+cron = "0.13"
+
+# Async streams
+futures = "0.3"
+
+# H.264 decoding
+openh264 = { version = "0.9", features = ["source"] }
+
+# Testing
+proptest = "1"
+
+[workspace.lints.clippy]
+pedantic = { level = "warn", priority = -1 }
+module_name_repetitions = "allow"
+must_use_candidate = "allow"
+missing_errors_doc = "allow"
+missing_panics_doc = "allow"
+cast_possible_truncation = "allow"
+cast_sign_loss = "allow"
+cast_precision_loss = "allow"
+cast_lossless = "allow"
+cast_possible_wrap = "allow"
+similar_names = "allow"
+unreadable_literal = "allow"
+doc_markdown = "allow"
+needless_pass_by_value = "allow"
+float_cmp = "allow"
+case_sensitive_file_extension_comparisons = "allow"
+double_ended_iterator_last = "allow"
+redundant_closure_for_method_calls = "allow"
+large_stack_arrays = "allow"
+too_many_lines = "allow"
+unnecessary_literal_bound = "allow"
+needless_continue = "allow"
+items_after_statements = "allow"
+default_trait_access = "allow"
+unnecessary_semicolon = "allow"
+io_other_error = "allow"
+map_unwrap_or = "allow"
+unused_async = "allow"
+field_reassign_with_default = "allow"
+single_match_else = "allow"
+ignored_unit_patterns = "allow"
+match_same_arms = "allow"
+to_string_in_format_args = "allow"
+if_not_else = "allow"
+collapsible_str_replace = "allow"
+collapsible_else_if = "allow"
+manual_let_else = "allow"
+uninlined_format_args = "allow"
+
+[workspace.lints.rust]
+unsafe_code = "deny"
+
+[profile.release]
+opt-level = "z"
+lto = true
+codegen-units = 1
+strip = true
+panic = "abort"
+
+[profile.dev]
+opt-level = 0
+debug = true

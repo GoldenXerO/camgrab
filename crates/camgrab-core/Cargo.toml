@@ -1,0 +1,91 @@
+[package]
+name = "camgrab-core"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+authors.workspace = true
+repository.workspace = true
+homepage.workspace = true
+keywords.workspace = true
+categories.workspace = true
+description = "Core library for camgrab - camera capture, motion detection, and notification system"
+readme = "../../README.md"
+exclude = ["tests/", "benches/"]
+
+[lints]
+workspace = true
+
+[dependencies]
+# Async runtime
+tokio = { workspace = true, features = ["fs", "io-util", "time"] }
+
+# Serialization
+serde = { workspace = true }
+serde_json = { workspace = true }
+serde_yaml = { workspace = true }
+toml = { workspace = true }
+
+# Error handling
+thiserror = { workspace = true }
+anyhow = { workspace = true }
+
+# Logging
+tracing = { workspace = true }
+
+# RTSP
+retina = { workspace = true }
+url = { workspace = true }
+
+# Image processing
+image = { workspace = true }
+
+# HTTP client
+reqwest = { workspace = true }
+
+# XML for ONVIF
+quick-xml = { workspace = true }
+
+# Time
+chrono = { workspace = true }
+
+# UUID
+uuid = { workspace = true }
+
+# MQTT
+rumqttc = { workspace = true }
+
+# Email
+lettre = { workspace = true }
+
+# S3
+rust-s3 = { workspace = true }
+
+# Base64
+base64 = { workspace = true }
+
+# Directories
+dirs = { workspace = true }
+
+# Random
+rand = { workspace = true }
+
+# File watching
+notify = { workspace = true }
+
+# Async streams
+futures = { workspace = true }
+
+# H.264 decoding
+openh264 = { workspace = true }
+
+# Cryptography for ONVIF WS-Security
+sha1 = "0.10"
+
+# Async trait
+async-trait = "0.1"
+
+[dev-dependencies]
+tempfile = "3"
+tokio = { workspace = true, features = ["test-util", "macros"] }
+proptest = { workspace = true }

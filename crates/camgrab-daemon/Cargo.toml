@@ -1,0 +1,31 @@
+[package]
+name = "camgrab-daemon"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+authors.workspace = true
+repository.workspace = true
+homepage.workspace = true
+description = "Persistent daemon for camgrab - scheduled captures, continuous monitoring, and camera management"
+readme = "../../README.md"
+
+[lints]
+workspace = true
+
+[dependencies]
+camgrab-core = { path = "../camgrab-core", version = "1.0.0" }
+tokio = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+anyhow = { workspace = true }
+thiserror = { workspace = true }
+tracing = { workspace = true }
+tracing-subscriber = { workspace = true }
+chrono = { workspace = true }
+cron = { workspace = true }
+uuid = { workspace = true }
+dirs = { workspace = true }
+axum = "0.7"
+tower = "0.4"
+tower-http = { version = "0.5", features = ["trace", "cors"] }
