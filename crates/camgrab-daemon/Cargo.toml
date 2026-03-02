@@ -14,7 +14,7 @@ readme = "../../README.md"
 workspace = true
 
 [dependencies]
-camgrab-core = { path = "../camgrab-core", version = "1.0.0" }
+camgrab-core = { path = "../camgrab-core", version = "1.0.1" }
 tokio = { workspace = true }
 serde = { workspace = true }
 serde_json = { workspace = true }
