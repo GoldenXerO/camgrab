@@ -1,4 +1,4 @@
-# camgrab
+# CamGrab
 
 **English** | [中文](./README_CN.md)
 
@@ -15,7 +15,7 @@
 
 A modern CLI tool for capturing snapshots, recording clips, detecting motion, and managing IP cameras via RTSP/ONVIF.
 
-## Why camgrab?
+## Why CamGrab?
 
 Most camera tools either depend on heavy external binaries (ffmpeg) or are full-blown NVR systems you have to self-host. camgrab is a single binary with zero external dependencies — connect to your cameras and start working in seconds.
 
